@@ -1,0 +1,677 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body {
+    text-align: center;
+    font-family: 'Poiret One', sans-serif;
+    font-weight: 100;
+	background-color: #091f32;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background-color: #00000000;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    margin-right: 10px;
+
+}
+
+.logo {
+    margin-left: 30px;
+
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navbar a {
+    display: block;
+    padding: 20px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 23px;
+}
+
+.navbar a:hover {
+    background: #5f5e5e54;
+}
+
+.background-img {
+    display: block;
+    height: 45%;
+}
+.overlay-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 50%;
+}
+
+.title {
+    font-family: 'Jost', sans-serif;
+    margin-bottom: 40px;
+    font-size: 55px;
+    font-weight: 200;
+    color: #0e2454;
+}
+
+.sub-title {
+    font-family: 'Playwrite DE Grund', sans-serif;
+    margin-bottom: 30px;
+    font-size: 27px;
+    font-weight: 100;
+    position: absolute;
+    color: #0e2454;
+}
+
+p {
+    font-size: 24px;
+    color: #0e2454;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    background: #fff;
+    color: #0e2454;
+    text-decoration: none;
+    height: 2.07%;
+    width: 7.5%;
+}
+
+.btn:hover {
+    background: none;
+}
+
+.btn-home {
+    display: flex;
+}
+
+.btn-home a {
+    margin: 0 10px;
+}
+
+.home {
+    background: url(img/homebg.jpg);
+    position: relative;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 119.9vh;
+}
+
+.overlay-home {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 70%;
+}
+
+.overhome-effect {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 65%;
+}
+
+.home .sub-title {
+    position: absolute;
+    color: #fff;
+    letter-spacing: 7px;
+    top: 14.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.welcome{
+    background: url(img/welcomebg.jpg);
+    position: relative;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 239.8vh;
+}
+
+.welcome .sub-title {
+    position: absolute;
+    color: #72614b;
+    top: 7%;
+    left: 14%;
+    letter-spacing: 12px;
+    font-weight: bold;
+}
+
+.welcome .title {
+    position: absolute;
+    color: #0e2454;
+    font-weight: bold;
+    top: 9%;
+    left: 23%;
+    letter-spacing: 18px;
+}
+
+.left-paragraph {
+    text-align: left;
+    position: absolute;
+    bottom: 76%;
+    left: 10%;
+    width: 33%;
+    letter-spacing: 9px;
+}
+
+.right-paragraph {
+    text-align: right;
+    position: absolute;
+    bottom: 60%;
+    left: 10%;
+    width: 33%;
+    letter-spacing: 9px;
+}
+
+.text3 {
+    text-align: justify;
+    position: absolute;
+    top: 56%;
+    left: 48%;
+    width: 30%;
+    letter-spacing: 9px;
+}
+
+.img1 {
+    position: absolute;
+    top: 32.6%;
+    left: 68.4%;
+    transform: translate(-50%, -50%);
+    max-width: 40%;
+}
+
+.img1-text1 {
+    color: #fff6ea;
+    font-size: 43px;
+    text-align: left;
+    position: absolute;
+    bottom: 58%;
+    left: 50%;
+    width: 23%;
+    letter-spacing: 10px;
+}
+
+.img1-text2 {
+    color: #fff6ea;
+    font-size: 24px;
+    text-align: left;
+    position: absolute;
+    bottom: 53%;
+    left: 50%;
+    width: 35%;
+    letter-spacing: 6px;
+}
+
+.img2 {
+    position: absolute;
+    top: 60.3%;
+    left: 26.2%;
+    transform: translate(-50%, -50%);
+    max-width: 32%;
+}
+
+.img2-text1 {
+    color: #0e2454;
+    font-size: 26px;
+    text-align: center;
+    position: absolute;
+    bottom: 46%;
+    left: 11%;
+    width: 31%;
+    letter-spacing: 10px;
+}
+
+.img2-text2 {
+    color: #fff6ea;
+    font-size: 18px;
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    width: 26%;
+    letter-spacing: 6px;
+}
+
+.tleft {
+    text-align: left;
+}
+.tright {
+    text-align: right;
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    width: 90%;
+}
+
+.wend .sub-title {
+    top: 85%;
+    left: 24%;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service{
+    background: url(img/servicebg.jpg);
+    position: relative;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 119.9vh;
+    
+}
+
+.service .title {
+    position: absolute;
+    top: 5%;
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.box-container .boxa, .boxb, .boxc {
+    position: absolute;
+    top: 30%;
+    height: 11rem;
+    width: 14rem;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem 5rem rbga(0, 0, 0, .5);
+    margin: 0rem;
+}
+
+.boxa { 
+    left: 21%;
+}
+
+.boxb {
+    left: 42%;
+}
+
+.boxc {
+    left: 63.4%;
+}
+
+.box-container .imgcontbox {
+    width: 8rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.serviceof {
+    font-size: 20px;
+    color: #fff;
+
+}
+
+.box-container .box p {
+    font-size: 16px;
+    padding: 0 15px;
+    color: #fff;
+}
+
+.service .btn {
+    position: absolute;
+    bottom: 25.5%;
+    left: 43.5%;
+}
+
+.service .down {
+    position: absolute;
+    top:81.6%;
+}
+
+.about {
+    background: url(img/aboutbg.jpg);
+    min-height: 359.5vh;
+    position: relative;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.aboutim {
+    position: absolute;
+    max-width: 38%;
+    top: 51.2%;
+    right: 11%;
+}
+
+.sisais {
+    position: absolute;
+    bottom: 71.6%;
+    left: 49.7%;
+    transform: translate(-50%, -50%);
+    max-width: 58%;
+}
+
+.siscon {
+    position: absolute;
+    bottom: 59.2%;
+    left: 49.7%;
+    transform: translate(-50%, -50%);
+    max-width: 58%;
+}
+
+.sishib {
+    position: absolute;
+    bottom: 47.2%;
+    left: 49.7%;
+    transform: translate(-50%, -50%);
+    max-width: 58%;
+}
+
+.about .title {
+    position: absolute;
+    top: 56%;
+    left: 10%;
+    letter-spacing: 22px;
+}
+
+.abouttext {
+    text-align: justify;
+    position: absolute;
+    top: 68.4%;
+    left: 13%;
+    width: 28%;
+    letter-spacing: 4px;
+}
+
+.btn-about {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    top: 51.3%;
+    left: 12%;
+    
+}
+
+.btn-about .a {
+    height: 2rem;
+    /*height: 27.3%;*/
+}
+
+.contact {
+    background: url(img/contactbg.jpg);
+    position: relative;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 239.8vh;
+}
+
+.contact .sub-title {
+    bottom: 100%;
+}
+
+.contact .title {
+    position: absolute;
+    color: #4d3e29;
+    bottom: 82.5%;
+    letter-spacing: 14px;
+}
+
+.paragraph1 {
+    text-align: justify;
+    position: absolute;
+    top: 35.3%;
+    left: 19.7%;
+    width: 28%;
+    letter-spacing: 6px;
+}
+
+.paragraph2 {
+    text-align: justify;
+    position: absolute;
+    top: 23.6%;
+    right: 20%;
+    width: 28%;
+    letter-spacing: 6px;
+}
+
+.logoimg {
+    width: 30%;
+}
+.aboutstart {
+    background: url(img/NOSOTROS1.jpg);
+    height: 239.5vh;
+    position: relative;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.aboutend {
+    background: url(img/NOSOTROS2.jpg);
+    height: 239.9vh;
+    position: relative;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#abouttitle {
+    position: absolute;
+    top: 8.6%;
+    left: 29.2%;
+    letter-spacing: 40px;
+}
+
+#mision {
+    top: 24.5%;
+    left: 43.6%;
+    letter-spacing: 12px;
+}
+
+#paragmi {
+    position: absolute;
+    top: 33%;
+    left: 16%;
+    text-align: justify;
+    width: 68%;
+    letter-spacing: 8px;
+
+}
+
+#vision {
+    top: 67.7%;
+    left: 43.6%;
+    letter-spacing: 12px;
+}
+
+#paragvi {
+    position: absolute;
+    top: 75.5%;
+    left: 16%;
+    text-align: justify;
+    width: 68%;
+    letter-spacing: 6px;
+
+}
+
+#ourv {
+    top: 3%;
+    left: 30.7%;
+    letter-spacing: 13px;
+}
+
+#paragva {
+    position: absolute;
+    top: 10.4%;
+    left: 16%;
+    text-align: justify;
+    width: 68%;
+    letter-spacing: 5px;
+
+}
+
+#ourteam {
+    top: 33.7%;
+    left: 32.3%;
+    letter-spacing: 14px;
+}
+
+#paragt {
+    position: absolute;
+    top: 41.5%;
+    left: 16%;
+    text-align: justify;
+    width: 68%;
+    letter-spacing: 8px;
+
+}
+
+.serviceheader {
+    background: url(img/SERVICIOS1.jpg);
+    height: 119.7vh;
+    position: relative;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#servicetitle {
+    position: absolute;
+    top: 12%;
+    left: 40.4%;
+    width: 9%;
+    text-align: center;
+}
+
+#presentser {
+    position: absolute;
+    top: 45%;
+    letter-spacing: 6px;
+    line-height: 1.5;
+    width: 79.8%;
+    left: 10.7%;
+    font-size: 19px;
+}
+
+#serv1 {
+    position: absolute;
+    top: 4%;
+    left: 33.6%;
+    font-size: 240%;
+    letter-spacing: 6px;
+    color: #fff;
+}
+
+.servicep2 {
+    background: url(img/SERVICIOS2.jpg);
+    height: 239.5vh;
+    position: relative;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.servicep3 {
+    background: url(img/SERVICIOS3.jpg);
+    height: 239.5vh;
+    position: relative;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.servicep4 {
+    background: url(img/SERVICIOS4.jpg);
+    height: 239.5vh;
+    position: relative;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.servicep5 {
+    background: url(img/SERVICIOS5.jpg);
+    height: 119.8vh;
+    position: relative;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#calc-title {
+    position: absolute;
+    letter-spacing: 2%;
+    left: 41.4%;
+    top: 10%;
+}
+
+form {
+    max-width: 60%;
+    position: absolute;
+    left: 20%;
+    top: 25%;
+}
+
+input {
+    height: 3%;
+    margin-bottom: 3%;
+    display: block;
+    text-align: left;
+    background-color: #ffffff77;
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-size: 135%;
+}
+
+#resultados {
+    position: absolute;
+    bottom: 40%;
+    left: 20%;
+    text-align: left;
+}
+
+
+@media (max-width: 768px) {
+    .title {
+        margin-bottom: 0;
+        font-size: 40px;
+    }
+    .sau {
+        height: 160vh;
+    }
+}
