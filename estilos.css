@@ -1,0 +1,75 @@
+/* Reset y configuraciones básicas */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.section {
+  width: 100%;
+  min-height: 120vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Fondos para cada sección */
+.section-1 {
+  background: url('img/newbg/startbg.jpg') no-repeat center center / cover;
+}
+
+.section-2 {
+  background: url('img/newbg/homebg.jpg') no-repeat center center / cover;
+}
+
+.section-3 {
+  background: url('img/newbg/calculatorbg.jpg') no-repeat center center / cover;
+}
+
+footer {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #333;
+  text-align: center;
+  color: #fff;
+}
+
+/* Escalado de texto y diseño responsivo */
+h1, h2, p {
+  margin: 10px 0;
+  font-size: clamp(1.5rem, 2vw + 1rem, 3rem);
+}
+
+/* Ajustes específicos para distintos tamaños de pantalla */
+@media (min-width: 320px) and (max-width: 480px) {
+  .section {
+    min-height: 120vh;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .section {
+    min-height: 140vh;
+  }
+}
+
+@media (min-width: 1025px) {
+  .section {
+    min-height: 160vh;
+  }
+}

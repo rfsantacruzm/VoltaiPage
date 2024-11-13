@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     const PANELSPOT = 0.555;
-    const HSP = 4.73;
+    const HSP = 4.17;
 
     // Función para calcular la producción de energía solar anual
-    function SolarProduction(numPanels, PANELSPOT, HSP) {
+    function SolarProduction(PANELSPOT, HSP) {
         const daysonyear = 365;
-        const factor = 0.85
-        return Math.floor(numPanels * PANELSPOT * HSP * daysonyear * factor);
+        return PANELSPOT * HSP * daysonyear;
     }
 
     // Función para calcular las emisiones evitadas
@@ -48,14 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const costDayLabour = 2300000;
         const factor = 0.5;
         let workdays = Math.ceil(numPanels / maxPanelsOneDay);
-    
-        // Si los paneles son 15 o menos, retorna solo el costo de un día de trabajo
-        if (numPanels <= maxPanelsOneDay) {
-            return costDayLabour;
-        } else {
-            // Para más de 15 paneles, incluye el factor de costo adicional por los días extra
-            return costDayLabour + (workdays - 1) * (costDayLabour * factor);
-        }
+        return costDayLabour + workdays * (costDayLabour * factor);
     }
 
     function getDesingCost(numPanels) {
@@ -95,51 +87,29 @@ document.addEventListener("DOMContentLoaded", function () {
         );
     }
 
-    function getAnnualSaving (UserConsum, kWcost) {
-        savinganual = UserConsum*kWcost*12;
-        return savinganual;
-    }
-
-    function getReturnTime(savinganual, estimatedinv) {
-        const inflation = 0.12;
-        const EIF = 0.15;
-        const initialEfficiency = 0.978588098;
-        const decayRate = 0.0114;
-        let annualReturn = savinganual;
-        let accsave = 0;
-        let returntime = 0;
-        while (accsave < estimatedinv) {
-            returntime++;
-            if (returntime > 1) {
-                annualReturn *= (1 + EIF);
-            }
-            const efficiency = initialEfficiency * Math.pow(1 - decayRate, returntime - 1);
-            const adjustedReturn = annualReturn * efficiency;
-            accsave += adjustedReturn / Math.pow(1 + inflation, returntime);
-        }
-        return returntime;
-    }
-
+    // Función para actualizar los resultados en pantalla
     function actualizarResultados() {
         const kWCost = parseFloat(document.getElementById("kW-cost").value);
         const UserConsum = parseFloat(document.getElementById("User-Consum").value);
+
+        // Verificar si las entradas son válidas
         if (isNaN(kWCost) || isNaN(UserConsum)) {
             return;
         }
 
-        const numPanels = GetnumPanels(UserConsum, PANELSPOT, HSP);
-        const solarprod = SolarProduction(numPanels, PANELSPOT, HSP);
+        const solarprod = SolarProduction(PANELSPOT, HSP);
         const emissionsavo = EmissAvoided(solarprod, UserConsum);
-        const savinganual = getAnnualSaving(UserConsum,kWCost);
+        const numPanels = GetnumPanels(UserConsum, PANELSPOT, HSP);
         const estimatedinv = getEstimatedInvestment(numPanels);
-        const invreturntime = getReturnTime(savinganual,estimatedinv);
+        const annualSaving = UserConsum * kWCost * 12;
+        const invReturnTime = estimatedinv / annualSaving;
 
         // Actualizar los elementos del DOM con los resultados
-        document.getElementById("solarprod").innerHTML = `<p>${solarprod.toFixed(2)} kWh</p>`;
-        document.getElementById("emissionsavo").innerHTML = `<p>${emissionsavo.toFixed(2)} kg</p>`;
-        document.getElementById("estimatedinv").innerHTML = `<p>${estimatedinv.toFixed(2)} COP</p>`;
-        document.getElementById("Annualsaving").innerHTML = `<p>${savinganual.toFixed(2)} COP</p>`;
-        document.getElementById("invreturntime").innerHTML = `<p>${invreturntime.toFixed(2)} años</p>`;
+        document.getElementById("solarprod").innerHTML = `<p>Producción de energía solar anual: ${solarprod.toFixed(2)} kWh</p>`;
+        document.getElementById("emissionsavo").innerHTML = `<p>Emisiones de CO2 evitadas: ${emissionsavo.toFixed(2)} kg</p>`;
+        document.getElementById("estimatedinv").innerHTML = `<p>Inversión estimada: ${estimatedinv.toFixed(2)} COP</p>`;
+        document.getElementById("Annualsaving").innerHTML = `<p>Ahorro anual estimado: ${annualSaving.toFixed(2)} COP</p>`;
+        document.getElementById("invreturntime").innerHTML = `<p>Tiempo de retorno de la inversión: ${invReturnTime.toFixed(2)} años</p>`;
     }
 
     // Escuchar el evento input en los campos de entrada
