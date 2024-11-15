@@ -34,11 +34,11 @@ body {
 
 }
 
-.logo a {
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 20px;
+#logonav {
+    width: 7%;
+    position: absolute;
+    left: 1.5%;
+    top: 10px;
 }
 
 .navbar a {
@@ -355,7 +355,7 @@ p {
 }
 
 .about {
-    background: url(img/newbg/calculatorbge.jpg);
+    background: url(img/newbg/calculatorbg.jpg);
     min-height: 359.7vh;
     position: relative;
     background-size: contain;
@@ -398,36 +398,76 @@ p {
     left: 29.8%;
 }
 
-#solar-form {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 36%;
-    letter-spacing: 0.18rem;
-}
-
-input {
-    background: rgba(101, 128, 101, 0.411);
-    width: 45%;
-}
-
-#leftForm, #rightform {
+#solar-form label {
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    top: 20%;
+    letter-spacing: 0.18rem;
+    top: 18.8%;
 }
 
 #leftform {
-    left: 5.3%;
+    left: 30.3%;
 }
 
+#rightform {
+    left: 52.6%;
+}
+
+#solar-form input {
+    position: absolute;
+    background: rgba(101, 128, 101, 0);
+    color: #fff;
+    width: 8%;
+    top: 21.4%;
+    height: 1.1%;
+}
+
+#User-Consum {
+    left: 34.3%;
+}
+
+#kW-cost {
+    left: 56.6%;
+}
 .calcresult {
     position: absolute;
     letter-spacing: 0.2rem;
     line-height: 1.5rem;
+}
+
+.result p {
+    color: #fff;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+}
+
+#Annualsaving {
+    position: absolute;
+    top: 29.5%;
+    left: 22.2%;
+}
+
+#solarprod {
+    position: absolute;
+    top: 29.5%;
+    left: 46.4%;
+}
+
+#emissionsavo {
+    position: absolute;
+    top: 29.5%;
+    left: 67.9%;
+}
+
+#estimatedinv {
+    position: absolute;
+    top: 40.2%;
+    left: 26.7%;
+}
+
+#invreturntime {
+    position: absolute;
+    top: 40.2%;
+    left: 64.2%;
 }
 
 #SaveANtext {
@@ -775,53 +815,196 @@ input {
     bottom: 10%;
 }
 
-@media (max-width: 640px) {
-    .home {
-        background-size: cover;
-    }
-    .overlay-home {
-        max-height: 40%;
-        top: 57.9%;
-    }
-    .sub-title {
-        font-size: 18px;
-    }
-    .welcome {
-        background-size: cover;
-    }
-    .service {
-        background-size: cover;
-    }
-    .about {
-        background-size: cover;
-    }
-    .contact {
-        background-size: cover;
-    }
-}
+@media (max-width: 992px) {
 
-@media (max-width: 1080px) {
-    .home {
-        background-size: cover;
+   
+    .sub-title{
+        
+        font-size: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 30px;        
     }
-    .overlay-home {
-        max-height: 40%;
-        top: 57.9%;
+    #welcomest.sub-title{
+        left: 50%;
+        transform: translateX(-50%);
     }
-    .sub-title {
-        font-size: 18px;
+
+    p {
+        font-size: 45%;
     }
-    .welcome {
-        background-size: cover;
+    
+    .left-paragraph {
+        bottom: 71.6%;
+        top: 27%;
+        
+    }
+    
+    .right-paragraph {
+        bottom: 55.6%;
+        
+    }
+    .img1{
+        top: 40%;
+    }
+    .img1-text1{
+        top: 42%;
+        font-size: 25px;
+        height: 5%;
+    }
+    .img1-text2{
+        top: 46%;
+        font-size: 13px;
+        height: 6.95%;
+    }
+
+    .img2{
+        top: 59%;
+    }
+    .img2-text1{
+        font-size: 17px;
+        left: 29%; 
+        transform: translateX(-50%);
+        top: 51%;
 
     }
-    .service {
-        background-size: cover;
+    .img2-text2{
+        font-size: 12px;
+        left: 26%; 
+        transform: translateX(-50%);
+        top: 65%;
     }
-    .about {
-        background-size: cover;
+
+    .text3{
+        top: 56%;
+        text-align: center; 
     }
-    .contact {
-        background-size: cover;
+    #endf.sub-title{
+        font-size: 25px;
+
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .title{
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 20px;
+
+    }
+
+    .boxa{
+        left: 23%;
+        
+    }
+    .boxb{
+        left:44%;
+        
+    }
+    #sodif.serviceof{
+        top:65%;
+    }
+    .boxc{
+        left:65%;
+    }
+    
+    #btnserv.btn{
+        left: 50%;
+        transform: translateX(-50%);
+        top:66%;
+    }
+    
+    #calctitle.title{
+        font-size: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        top:14%;
+
+    }
+    #paragcalc{
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 12px;
+        top:18.5%;
+    }
+    #subcalc.sub-title{
+        left: 50%;
+        transform: translateX(-50%);
+        top:25%;
+    }
+
+    #calch3{
+        font-size: 9px;
+        left: 50%;
+        transform: translateX(-50%);
+        top:31%
+    }
+
+    #SaveANtext.calcresult{
+        font-size: 10px;
+        top:32%;
+    }
+
+    #Emitext.calcresult{
+        font-size: 10px;
+        top:32%;
+    }
+
+    #EnerGentext.calcresult{
+        font-size: 10px;
+        top:37%;
+    }
+
+    #invetext.calcresult{
+        font-size: 10px;
+        top:39.75%;
+    }
+
+    #retimetext.calcresult{
+        font-size: 10px;
+        top:39.75%;
+    }
+
+    #rightform{
+        left: 75%;
+    }
+
+    #kW-cost{
+        transform: translateX(50%);
+    }
+
+    #leftForm{
+        left: -25%;
+    }
+
+    #User-Consum{
+        transform: translateX(50%);
+    }
+
+    #aboutt.title{
+        font-size: 20px;
+        left: 30%;
+        top: 54.5%;
+       
+    }
+    .abouttext{
+        font-size: 10px;
+        top: 64%;
+    }
+
+    #contsub1.sub-title{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #contsub2.sub-title{
+        left: 50%;
+        transform: translateX(-50%);
+        top:1%;
+    }
+
+    #contitle.title{
+        top: 26%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

@@ -16,7 +16,7 @@
 <body>
 	<div class="head">
 		<div class="logo">
-			<a href="#">logo</a>
+			<a href="index.html"><img src="img/logo.png" alt="VOLTAI" id="logonav"></a>
 		</div>
 		<nav class="navbar">
 			<a href="index.html">INICIO</a>		
@@ -93,16 +93,12 @@
 		</p>
 		<h2 id="subcalc" class="sub-title">Ingresa aquí</h2>
 		<form id="solar-form">
-			<div id="leftForm">
-				<label for="User-Consum">Tu consumo mensual</label>
-				<br>
-				<input type="number" id="User-Consum" required>
-			</div>
-			<div id="rightform">
-				<label for="kW-cost">Costo kWh de tu zona</label>
-				<br>
-				<input type="number" id="kW-cost" required>
-			</div>
+			<label for="User-Consum" id="leftform">Tu consumo mensual</label>
+			<br>
+			<input type="number" id="User-Consum" required>
+			<label for="kW-cost" id="rightform">Costo kWh de tu zona</label>
+			<br>
+			<input type="number" id="kW-cost" required>
     	</form>
 		<h3 id="calch3">
 			(Estos valores los encuentras en tu factura de servicio eléctrico)

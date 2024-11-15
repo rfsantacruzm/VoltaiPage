@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Actualizar los elementos del DOM con los resultados
         document.getElementById("solarprod").innerHTML = `<p>${solarprod.toFixed(2)} kWh</p>`;
-        document.getElementById("emissionsavo").innerHTML = `<p>${emissionsavo.toFixed(2)} kg</p>`;
+        document.getElementById("emissionsavo").innerHTML = `<p>${emissionsavo.toFixed(2)} kg CO2</p>`;
         document.getElementById("estimatedinv").innerHTML = `<p>${estimatedinv.toFixed(2)} COP</p>`;
         document.getElementById("Annualsaving").innerHTML = `<p>${savinganual.toFixed(2)} COP</p>`;
         document.getElementById("invreturntime").innerHTML = `<p>${invreturntime.toFixed(2)} años</p>`;
