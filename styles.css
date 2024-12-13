@@ -873,7 +873,7 @@ p {
     .textmob {
         display: none;
     }
-    
+
     .text3{
         top: 56%;
         text-align: center; 
@@ -1845,7 +1845,7 @@ p {
         letter-spacing: 18px;
     }
 
-    .left-paragraph {
+    #left-paragraph {
         text-align: left;
         position: absolute;
         bottom: 71.4%;
@@ -1853,12 +1853,16 @@ p {
         width: 22%;
     }
 
-    .right-paragraph {
+    #right-paragraph {
         text-align: right;
         position: absolute;
         bottom: 57%;
         left: 14.2%;
         width: 26%;
+    }
+
+    .textmob {
+        display: none;
     }
 
     .text3 {
