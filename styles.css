@@ -164,7 +164,7 @@ p {
     letter-spacing: 18px;
 }
 
-.left-paragraph {
+#left-paragraph {
     text-align: left;
     position: absolute;
     bottom: 71.6%;
@@ -172,12 +172,16 @@ p {
     width: 19.7%;
 }
 
-.right-paragraph {
+#right-paragraph {
     text-align: right;
     position: absolute;
     bottom: 57%;
     left: 17.2%;
     width: 24%;
+}
+
+.textmob {
+    display: none;
 }
 
 .text3 {
@@ -825,13 +829,13 @@ p {
         font-size: 45%;
     }
     
-    .left-paragraph {
+    #left-paragraph {
         bottom: 71.6%;
         top: 27%;
         
     }
     
-    .right-paragraph {
+    #right-paragraph {
         bottom: 55.6%;
         
     }
@@ -866,6 +870,10 @@ p {
         top: 65%;
     }
 
+    .textmob {
+        display: none;
+    }
+    
     .text3{
         top: 56%;
         text-align: center; 
